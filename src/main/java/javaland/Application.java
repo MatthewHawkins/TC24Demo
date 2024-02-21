@@ -23,7 +23,7 @@ import org.dwcj.exceptions.DwcjException;
   }
 """)
 @AppTitle("DWCJ Hello World")
-public class HelloWorldJava extends App {
+public class Application extends App {
   
   Paragraph hello = new Paragraph("Hello World!");
   Button btn = new Button("Say Hello");
