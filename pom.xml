@@ -38,7 +38,7 @@
                 <configuration>
                     <!-- see https://github.com/DwcJava/dwcj-install-maven-plugin for options -->
                     <deployurl>http://localhost:8888/dwcj-install</deployurl>
-                    <classname>samples.HelloWorldJava</classname>
+                  <!--  <classname>samples.HelloWorldJava</classname> -->
                     <publishname>hworld</publishname>
                     <debug>true</debug>
                 </configuration>
