@@ -1,24 +1,24 @@
 package javaland.components.pages.ecom.products;
 
 import java.util.ArrayList;
-import org.dwcj.component.Composite;
-import org.dwcj.component.button.Button;
-import org.dwcj.component.button.ButtonTheme;
-import org.dwcj.component.field.TextField;
-import org.dwcj.component.field.TextField.Type;
-import org.dwcj.component.html.elements.Div;
-import org.dwcj.component.html.elements.Paragraph;
-import org.dwcj.component.list.ChoiceBox;
-import org.dwcj.component.list.ListItem;
+import com.webforj.component.Composite;
+import com.webforj.component.button.Button;
+import com.webforj.component.button.ButtonTheme;
+import com.webforj.component.field.TextField;
+import com.webforj.component.field.TextField.Type;
+import com.webforj.component.html.elements.Div;
+import com.webforj.component.html.elements.Paragraph;
+import com.webforj.component.list.ChoiceBox;
+import com.webforj.component.list.ListItem;
 
 public class SearchBar extends Composite<Div>{
   
-    Div searchContainer = new Div();
-    Div sortContainer = new Div();
-    TextField searchInput = new TextField();
-    Button searchBtn = new Button("Go");
-    Paragraph sortLbl = new Paragraph ("Sort by");
-    ChoiceBox sortDrop = new ChoiceBox();
+    private Div searchContainer = new Div();
+    private Div sortContainer = new Div();
+    private TextField searchInput = new TextField();
+    private Button searchBtn = new Button("Go");
+    private Paragraph sortLbl = new Paragraph ("Sort by");
+    private ChoiceBox sortDrop = new ChoiceBox();
 
     public SearchBar() {
     

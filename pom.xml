@@ -4,30 +4,66 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.dwcj.samples</groupId>
-    <artifactId>hello-world-java</artifactId>
+    <groupId>com.webforj.samples</groupId>
+    <artifactId>ControlSamples</artifactId>
     <version>23.06</version>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
-    </properties>
+        <project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
+   </properties>
+
+  <repositories>
+    <repository>
+      <id>snapshots-repo</id>
+      <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+      <releases><enabled>false</enabled></releases>
+      <snapshots><enabled>true</enabled></snapshots>
+    </repository>
+  </repositories>
+
+  <pluginRepositories>
+    <pluginRepository>
+        <id>ossrh-snapshots</id>
+        <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+        <snapshots>
+            <enabled>true</enabled>
+        </snapshots>
+        <releases>
+            <enabled>false</enabled>
+        </releases>
+    </pluginRepository>
+</pluginRepositories>
 
     <dependencies>
         <dependency>
-            <groupId>org.dwcj</groupId>
-            <artifactId>dwcj-engine</artifactId>
-            <version>23.06</version>
+            <groupId>com.webforj</groupId>
+            <artifactId>webforj</artifactId>
+            <version>24.00-SNAPSHOT</version>
+            <type>pom</type>
+            <!-- <scope>system</scope>
+            <systemPath>C:\DWCJ_Files\engine\dwcj-engine\target\dwcj-engine-24.00-SNAPSHOT.jar</systemPath> -->
+        </dependency>
+        <dependency>
+            <groupId>com.webforj</groupId>
+            <artifactId>webforj-code</artifactId>
+            <version>24.00-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.webforj</groupId>
+            <artifactId>webforj-googlecharts</artifactId>
+            <version>24.00-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
     <build>
-        <finalName>HelloWorldJava</finalName>
+        <finalName>controlsamples</finalName>
         <plugins>
             <plugin>
-                <groupId>org.dwcj</groupId>
-                <artifactId>dwcj-install-maven-plugin</artifactId>
-                <version>0.2.0</version>
+                <groupId>com.webforj</groupId>
+                <artifactId>webforj-install-maven-plugin</artifactId>
+                <version>24.00-SNAPSHOT</version>
                 <executions>
                     <execution>
                         <goals>
@@ -36,9 +72,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <!-- see https://github.com/DwcJava/dwcj-install-maven-plugin for options -->
-                    <deployurl>http://localhost:8888/dwcj-install</deployurl>
-                  <!--  <classname>samples.HelloWorldJava</classname> -->
+                    <deployurl>http://localhost:8888/webforj-install</deployurl>
                     <publishname>hworld</publishname>
                     <debug>true</debug>
                 </configuration>

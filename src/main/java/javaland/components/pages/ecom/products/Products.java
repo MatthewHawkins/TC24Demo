@@ -1,7 +1,7 @@
 package javaland.components.pages.ecom.products;
 
-import org.dwcj.component.html.elements.Div;
-import org.dwcj.component.html.elements.Img;
+import com.webforj.component.html.elements.Div;
+import com.webforj.component.html.elements.Img;
 
 
 public final class Products extends Div {

@@ -1,11 +1,13 @@
 package javaland;
 
-import org.dwcj.App;
-import org.dwcj.annotation.AppTitle;
-import org.dwcj.annotation.InlineStyleSheet;
-import org.dwcj.component.window.Frame;
-import org.dwcj.exceptions.DwcjException;
+import com.webforj.App;
+import com.webforj.annotation.AppTitle;
+import com.webforj.annotation.InlineStyleSheet;
+import com.webforj.component.window.Frame;
+import com.webforj.exceptions.WebforjException;
+import javaland.components.pages.ecom.productdetails.DetailsPage;
 import javaland.components.pages.ecom.products.ProductsPage;
+import javaland.components.tabbedmenu.TabbedMenu;
 
 /**
  * A simple HelloWorld app.
@@ -15,13 +17,17 @@ import javaland.components.pages.ecom.products.ProductsPage;
 public class Application extends App {
 
   @Override
-  public void run() throws DwcjException {
+  public void run() throws WebforjException {
 
     Frame mainFrame = new Frame();
     mainFrame.addClassName("mainFrame");
     
-    ProductsPage productsPage = new ProductsPage();
     
-    mainFrame.add(productsPage);
+    ProductsPage productsPage = new ProductsPage();
+    DetailsPage detailsPage = new DetailsPage();
+    
+    TabbedMenu tabbedMenu = new TabbedMenu(productsPage, detailsPage);
+    
+    mainFrame.add(tabbedMenu);
   }
 }

@@ -1,18 +1,24 @@
 package javaland.components.pages.ecom.products;
 
-import org.dwcj.component.Composite;
-import org.dwcj.component.html.elements.Div;
-import org.dwcj.component.html.elements.Img;
+import com.webforj.component.Composite;
+import com.webforj.component.html.elements.Div;
+import com.webforj.component.html.elements.Img;
   
 public class ItemCard extends Composite<Div> {
     
-    Div imagediv = new Div().addClassName("image");
-    Div namediv = new Div().addClassName("name");
-    Div pricediv = new Div().addClassName("price");
-    Div ratingdiv = new Div().addClassName("rating");
-    Div stockdiv = new Div().addClassName("stock");
+    private Div imagediv;
+    private Div namediv;
+    private Div pricediv;
+    private Div ratingdiv;
+    private Div stockdiv;
    
     public ItemCard(String productName, Img productImage, String price, String rating, String stock){
+      
+      imagediv = new Div().addClassName("image");
+      namediv = new Div().addClassName("name");
+      pricediv = new Div().addClassName("price");
+      ratingdiv = new Div().addClassName("rating");
+      stockdiv = new Div().addClassName("stock");
       
       this.namediv.setText(productName);
       this.pricediv.setText(price);
