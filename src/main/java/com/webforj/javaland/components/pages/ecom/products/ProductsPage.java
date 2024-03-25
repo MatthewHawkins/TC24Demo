@@ -1,7 +1,9 @@
-package javaland.components.pages.ecom.products;
+package com.webforj.javaland.components.pages.ecom.products;
 
 import com.webforj.component.html.elements.Div;
 import com.webforj.component.html.elements.Paragraph;
+import com.webforj.javaland.components.pages.ecom.products.widgets.Products;
+import com.webforj.javaland.components.pages.ecom.products.widgets.SearchBar;
 
 public class ProductsPage extends Div{
   

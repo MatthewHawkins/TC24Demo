@@ -1,4 +1,4 @@
-package javaland.components.pages.ecom.productdetails;
+package com.webforj.javaland.components.pages.ecom.productdetails.widgets;
 
 import com.webforj.component.html.elements.Div;
 import com.webforj.component.html.elements.Paragraph;

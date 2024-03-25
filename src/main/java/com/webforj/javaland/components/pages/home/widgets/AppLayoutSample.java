@@ -1,6 +1,7 @@
 package com.webforj.javaland.components.pages.home.widgets;
 
 
+import com.webforj.App;
 import com.webforj.component.html.elements.Div;
 import com.webforj.component.html.elements.Iframe;
 import com.webforj.component.htmlcontainer.HtmlContainer;
@@ -60,8 +61,8 @@ public class AppLayoutSample extends Div {
     iframe.addClassName("javalandSample__iframe");
     iframe.setHtml(/* html */"""
         <iframe
-          class="lazyload"
-          data-src="https://eu.bbx.kitchen/webapp/controlsamples?class=layout_demos.applayout.AppLayoutDemo"
+          class="lazyload applayout__iframe"
+          data-src="http://localhost:8888/webapp/controlsamples?class=layout_demos.applayout.AppLayoutMobileDrawer"
           style="width: 100%; height: 100%; border: none;overflow: hidden;"
           loading="lazy">
           </iframe>

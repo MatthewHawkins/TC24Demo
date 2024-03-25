@@ -1,7 +1,9 @@
-package javaland.components.pages.ecom.productdetails;
+package com.webforj.javaland.components.pages.ecom.productdetails;
 
 import com.webforj.component.html.elements.Div;
 import com.webforj.component.html.elements.Paragraph;
+import com.webforj.javaland.components.pages.ecom.productdetails.widgets.ProductDetails;
+import com.webforj.javaland.components.pages.ecom.productdetails.widgets.ProductImage;
 
 public class DetailsPage extends Div{
 
@@ -11,10 +13,10 @@ public class DetailsPage extends Div{
     productDetailTitle.addClassName("page-title");
     
     String[] imageUrls = {
-        "context://thumbnail-1.jpeg",
-        "context://thumbnail-2.jpeg",
-        "context://thumbnail-3.jpeg",
-        "context://thumbnail-4.jpeg",
+        "context://public/img/thumbnail-1.jpeg",
+        "context://public/img/thumbnail-2.jpeg",
+        "context://public/img/thumbnail-3.jpeg",
+        "context://public/img/thumbnail-4.jpeg",
     };
 
     ProductImage productImage = new ProductImage(imageUrls);

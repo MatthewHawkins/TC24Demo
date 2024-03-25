@@ -5,7 +5,7 @@
       @Attribute(name = "type", value = "module")
     }
 )
-public final class QRCode extends WebComponent {
+public final class QRCode extends ElementComposite {
 
   private final PropertyDescriptor<String> VALUE =
       PropertyDescriptor.property("value", "");

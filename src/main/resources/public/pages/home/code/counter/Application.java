@@ -1,21 +1,20 @@
 @AppTitle("Simple Counter")
 public final class Application extends App {
+  
   private int count = 0;
+  Paragraph text = new Paragraph("Count: 0");
+  Button button = new Button("Counter");
 
   @Override
-  public void run() throws DwcException {
+  public void run() throws WebforjException {
 
-    AppPanel window = new AppPanel();
+    Frame mainFrame = new Frame();
+    mainFrame.add(text, button);
 
-    Label text = new Label("Count: 0");
-    result.add(text);
-
-    Button button = new Button("Counter");
     button.onClick(e -> {
       count++;
       text.setText("Count: " + count);
     });
 
-    window.add(text, button);
   }
 }

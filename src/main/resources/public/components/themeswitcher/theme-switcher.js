@@ -86,6 +86,16 @@ class ThemeSwitcher extends LitElement {
             // wait for the iframe to load
             node.addEventListener('load', () => {
               node.contentWindow.document.documentElement.setAttribute('data-app-theme', this.currentTheme);
+              if (iframe) {
+                var iframeContent = iframe.contentWindow;
+                if (iframeContent && iframeContent.document) {
+                    var htmlTag = iframeContent.document.querySelector('html');
+                    if (htmlTag && htmlTag.hasAttribute('data-app-theme')) {
+                        htmlTag.setAttribute('data-app-theme', 'dark');
+                        console.log("Successfully changed data-app-theme attribute.");
+                    }
+                }
+            } 
             });
           }
         });

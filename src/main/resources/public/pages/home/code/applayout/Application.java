@@ -1,9 +1,10 @@
 public class AppTemplateDemo extends App {
+  
+  AppTemplateMobile layout = new AppTemplateMobile();
+  
   @Override
-  public void run() throws DwcException {
-    AppPanel window = new AppPanel();
-
-    AppTemplateMobile layout = new AppTemplateMobile();
+  public void run() throws WebforjException {
+    Frame mainFrame = new Frame();
 
     // .....
 
@@ -17,6 +18,6 @@ public class AppTemplateDemo extends App {
 
     // .....
 
-    window.add(layout);
+    mainFrame.add(layout);
   }
 }

@@ -10,6 +10,7 @@ import com.webforj.component.tabbedpane.TabbedPane.Alignment;
 import com.webforj.javaland.components.apptemplate.AppTemplate;
 import com.webforj.javaland.components.pages.Documentation;
 import com.webforj.javaland.components.pages.dashboard.Dashboard;
+import com.webforj.javaland.components.pages.ecom.Ecom;
 import com.webforj.javaland.components.pages.home.Home;
 import com.webforj.javaland.components.themeswitcher.ThemeSwitcher;
 
@@ -45,6 +46,7 @@ public final class Shell extends AppTemplate {
   private void configurePages() {
     addPage("<dwc-icon name='home' part='icon'></dwc-icon>  Home", new Home());
     addPage("<dwc-icon name='dashboard' part='icon'></dwc-icon>  Dashboard", new Dashboard());
+    addPage("<dwc-icon name='shopping-cart' part='icon'></dwc-icon>  Ecom", new Ecom());
     addPage("<dwc-icon name='book' part='icon'></dwc-icon>  dwcj.org", new Documentation());
  
     selectTab(0);

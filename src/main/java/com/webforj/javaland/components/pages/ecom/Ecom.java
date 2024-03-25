@@ -1,17 +1,22 @@
-package javaland.components.tabbedmenu;
+package com.webforj.javaland.components.pages.ecom;
 
+import com.webforj.annotation.InlineStyleSheet;
 import com.webforj.component.html.elements.Div;
 import com.webforj.component.tabbedpane.TabbedPane;
 import com.webforj.component.tabbedpane.TabbedPane.Alignment;
-import javaland.components.pages.ecom.cart.CheckoutPage;
-import javaland.components.pages.ecom.productdetails.DetailsPage;
-import javaland.components.pages.ecom.products.ProductsPage;
+import com.webforj.javaland.components.pages.ecom.productdetails.DetailsPage;
+import com.webforj.javaland.components.pages.ecom.products.ProductsPage;
 
-public class TabbedMenu extends Div{
-
-  public TabbedMenu(ProductsPage productsPage, DetailsPage detailsPage) {
+@InlineStyleSheet("context://public/pages/ecom.css")
+public class Ecom extends Div{
+  
+  private ProductsPage productsPage = new ProductsPage();
+  private DetailsPage detailsPage = new DetailsPage();
+  private TabbedPane tabbedPane = new TabbedPane();
+  
+  public Ecom() {
     
-    TabbedPane tabbedPane = new TabbedPane();
+    addClassName("page page--ecom");
 
     Div productsPageWrapper = new Div();
     productsPageWrapper.addClassName("tab-page-container");

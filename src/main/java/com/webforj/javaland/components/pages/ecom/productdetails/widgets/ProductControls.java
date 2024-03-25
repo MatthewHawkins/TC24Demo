@@ -1,4 +1,4 @@
-package javaland.components.pages.ecom.productdetails;
+package com.webforj.javaland.components.pages.ecom.productdetails.widgets;
 
 import java.util.ArrayList;
 import com.webforj.component.button.Button;
