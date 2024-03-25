@@ -1,0 +1,24 @@
+package com.webforj.javaland.components.pages.ecom.products;
+
+import com.webforj.component.html.elements.Div;
+import com.webforj.component.html.elements.Paragraph;
+import com.webforj.javaland.components.pages.ecom.products.widgets.Products;
+import com.webforj.javaland.components.pages.ecom.products.widgets.SearchBar;
+
+public class ProductsPage extends Div{
+  
+  public ProductsPage(){
+    
+    Paragraph productsTitle = new Paragraph("Products");
+    productsTitle.addClassName("page-title");
+    
+    Products products = new Products();
+    
+    SearchBar searchBar = new SearchBar();
+    
+    this.add(productsTitle, searchBar, products);
+    this.addClassName("background");
+    
+  }
+
+}
