@@ -8,6 +8,7 @@ public class ProductRecord {
   private String price;
   private String quantity;
   private String amount;
+  private String imageURL;
 
   // Getter for 'product'
   public String getProduct() {
@@ -47,5 +48,15 @@ public class ProductRecord {
   // Setter for 'amount'
   public void setAmount(String amount) {
     this.amount = amount;
+  }
+
+  // Getter for 'amount'
+  public String getImageURL() {
+    return imageURL;
+  }
+
+  // Setter for 'amount'
+  public void setImageURL(String url) {
+    this.imageURL = url;
   }
 }

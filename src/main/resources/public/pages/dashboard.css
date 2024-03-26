@@ -36,9 +36,22 @@ google-chart{
 
 /* Product Table
 ================ */
-/* .product--table::part(row) {
-  padding: var(--dwc-space-m);
-} */
+.table::part(avatar-renderer) {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.table::part(avatar-img) {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+}
+
+.table::part(avatar-text) {
+  display: flex;
+  flex-direction: column;
+}
 
 /* Apps Widgets
 ================ */
