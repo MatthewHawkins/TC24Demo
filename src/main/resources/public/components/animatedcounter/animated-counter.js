@@ -28,6 +28,7 @@ class AnimatedCounter extends LitElement {
       value: { type: Number },
       valuePrefix: { type: String },
       valueSuffix: { type: String },
+      active: { type: Boolean, reflect: true }
     };
   }
 
@@ -118,6 +119,38 @@ class AnimatedCounter extends LitElement {
     this.value = 0;
     this.valuePrefix = this.valuePrefix || '';
     this.valueSuffix = this.valueSuffix || '';
+    this.activeObserver = null; // Initialize observer variable
+  }
+
+  connectedCallback() {
+    super.connectedCallback();
+    this.setupActiveObserver();
+  }
+
+  //HARDCODED TO RELOAD WHEN IN JAVALAND APP 
+  setupActiveObserver() {
+    const targetElement = document.querySelector('dwc-tab[data-tab-index="1"]');
+    if (targetElement) {
+      const observerConfig = { attributes: true };
+      const mutationCallback = (mutationsList, observer) => {
+        for (const mutation of mutationsList) {
+          if (mutation.type === 'attributes' && mutation.attributeName === 'active') {
+            if (mutation.target.hasAttribute('active')) {
+              this.animate(this.value += .01);
+            }
+          }
+        }
+      };
+      this.activeObserver = new MutationObserver(mutationCallback);
+      this.activeObserver.observe(targetElement, observerConfig);
+    }
+  }
+
+  disconnectedCallback() {
+    super.disconnectedCallback();
+    if (this.activeObserver) {
+      this.activeObserver.disconnect();
+    }
   }
 
   updated(changedProperties) {
@@ -132,25 +165,19 @@ class AnimatedCounter extends LitElement {
   }
 
   animate(value) {
-    const start = this.start;
+    const startTime = performance.now();
     const duration = this.speed;
 
-    if (duration === 0) {
-      this.renderRoot.querySelector('[part="value"]').innerHTML = this.format(value);
-      return;
-    }
-
-    const inc = (timestamp) => {
-      const progress = timestamp - start;
-      const progressPercentage = Math.min(progress / duration, 1);
-      const currentValue = start + progressPercentage * (value - start);
+    const animateValue = (timestamp) => {
+      const elapsed = timestamp - startTime;
+      const progressPercentage = Math.min(elapsed / duration, 1);
+      const currentValue = this.start + progressPercentage * (value - this.start);
       this.renderRoot.querySelector('[part="value"]').innerHTML = this.format(currentValue);
-      if (progress < duration) {
-        window.requestAnimationFrame(inc);
+      if (elapsed < duration) {
+        window.requestAnimationFrame(animateValue);
       }
     };
-
-    window.requestAnimationFrame(inc);
+    window.requestAnimationFrame(animateValue);
   }
 
   render() {

@@ -48,8 +48,6 @@ public final class Shell extends AppTemplate {
     addPage("<dwc-icon name='dashboard' part='icon'></dwc-icon>  Dashboard", new Dashboard());
     addPage("<dwc-icon name='shopping-cart' part='icon'></dwc-icon>  Ecom", new Ecom());
     addPage("<dwc-icon name='book' part='icon'></dwc-icon>  dwcj.org", new Documentation());
- 
-    selectTab(0);
   }
 
   
