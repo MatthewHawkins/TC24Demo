@@ -39,7 +39,7 @@ public class ProductControls extends Div{
     Div controlButtons = new Div();
     Button likeButton = new Button("""
         <html>
-        <bbj-icon name='heart' expanse='2xs'> </bbj-icon>
+        <dwc-icon name='heart' expanse='2xs'> </dwc-icon>
         </html>
       """);
 
