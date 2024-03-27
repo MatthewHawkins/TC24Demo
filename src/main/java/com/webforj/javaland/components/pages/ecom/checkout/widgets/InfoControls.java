@@ -15,7 +15,7 @@ public class InfoControls extends Composite<Div>{
     billingBtn = new Button("""
         <html>
         <div style='text-align: center;'>
-            <bbj-icon name='user' style='display: block; margin: auto; margin-bottom: 10px;'></bbj-icon>
+            <dwc-icon name='user' style='display: block; margin: auto; margin-bottom: 10px;'></dwc-icon>
             <span style='display: block; margin-top: 10px;'>Billing Info</span>
         </div>
         </html>
@@ -25,7 +25,7 @@ public class InfoControls extends Composite<Div>{
     shippingBtn = new Button("""
         <html>
         <div style='text-align: center;'>
-            <bbj-icon name='truck-delivery' style='display: block; margin: auto; margin-bottom: 10px;'></bbj-icon>
+            <dwc-icon name='truck-delivery' style='display: block; margin: auto; margin-bottom: 10px;'></dwc-icon>
             <span style='display: block; margin-top: 10px;'>Shipping Info</span>
         </div>
         </html>
@@ -35,7 +35,7 @@ public class InfoControls extends Composite<Div>{
     paymentBtn = new Button("""
         <html>
         <div style='text-align: center;'>
-            <bbj-icon name='cash' style='display: block; margin: auto; margin-bottom: 10px;'></bbj-icon>
+            <dwc-icon name='cash' style='display: block; margin: auto; margin-bottom: 10px;'></dwc-icon>
             <span style='display: block; margin-top: 10px;'>Payment Info</span>
         </div>
         </html>
