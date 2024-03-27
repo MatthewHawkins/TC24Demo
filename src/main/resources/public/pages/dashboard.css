@@ -17,7 +17,7 @@
 
 /* Charts Widgets
 ================ */
-google-chart{
+google-chart {
   width: 100%;
 }
 
@@ -169,4 +169,49 @@ google-chart{
 
 .dialog__message::part(input) {
   overflow: visible;
+}
+
+/* TeamCard Widget
+================ */
+
+.teamcard--wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: var(--dwc-space-m);
+}
+
+.team--card {
+  background-color: var(--dwc-surface-3);
+  border-radius: var(--dwc-border-radius-m);
+  padding: var(--dwc-space-2xl) var(--dwc-space-xl);
+  display: flex;
+  flex: 1 1 40%;
+  gap: 1.5rem;
+  align-items: center;
+  flex-direction: row;
+  transition: background-color 0.25s ease;
+}
+
+.team--card.is-active {
+  background-color: #7db1ff;
+}
+
+.team--card:hover {
+  background-color: #abccfd;
+  cursor: pointer;
+}
+
+.team--avatar {
+  width: var(--dwc-size-2xl);
+  border-radius: var(--dwc-border-radius-round);
+}
+
+.team--username {
+  color: var(--dwc-color-black);
+  font-size: var(--dwc-font-size-l);
+}
+
+.team--position {
+  color: var(--dwc-color-gray-50);
 }

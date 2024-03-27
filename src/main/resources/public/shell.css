@@ -5,7 +5,8 @@
 .header__primary {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 0 30px;
   gap: var(--dwc-space-s);
 }
 
@@ -13,11 +14,12 @@
   flex: 1;
   display: flex;
   align-items: center;
+  max-width: 150px;
+  margin-right: -150px;
   padding: var(--dwc-space-s);
 }
 
 .header__logo img {
-  max-width: 32px;
   border-radius: 10px;
 }
 

@@ -1,5 +1,6 @@
 package com.webforj.javaland.components.pages.dashboard.widgets.inbox;
 
+import com.webforj.App;
 import com.webforj.component.html.elements.Div;
 import com.webforj.component.html.elements.Paragraph;
 import com.webforj.component.html.elements.Strong;

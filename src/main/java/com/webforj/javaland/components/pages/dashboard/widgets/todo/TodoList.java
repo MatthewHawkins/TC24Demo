@@ -5,6 +5,7 @@ import java.beans.PropertyChangeListener;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.webforj.App;
 import com.webforj.component.html.elements.Div;
 import com.webforj.component.optioninput.CheckBox;
 import com.webforj.javaland.components.pages.dashboard.widgets.todo.model.TodoItem;
@@ -35,6 +36,7 @@ public class TodoList extends Div {
   private void addCheckbox(TodoItem item) {
     CheckBox checkBox = new CheckBox();
     checkBox.setUserData("id", item.getId());
+    App.consoleLog(checkBox.getUserData("id") + "");
     checkBox.setText(item.getText());
     checkBox.setChecked(item.isCompleted());
     checkBox.addClassName("todo__item");
@@ -55,12 +57,11 @@ public class TodoList extends Div {
 
       if (evt.getPropertyName().equals("removed")) {
         TodoItem item = (TodoItem) evt.getNewValue();
-        checkBoxes.stream()
-            .filter(checkBox -> checkBox.getUserData("id").equals(item.getId()))
-            .findFirst()
-            .ifPresent(checkBox -> {
-              checkBox.destroy();
-            });
+        checkBoxes.forEach( e -> {
+          if (e.getUserData("id") != null && item.getId() != null && e.getUserData("id").equals(item.getId())) {
+            e.destroy();
+        }        
+        });
       }
     }
   }

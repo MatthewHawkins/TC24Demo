@@ -11,6 +11,7 @@ import com.webforj.javaland.components.pages.dashboard.widgets.counters.Conversi
 import com.webforj.javaland.components.pages.dashboard.widgets.counters.TodaySales;
 import com.webforj.javaland.components.pages.dashboard.widgets.counters.TotalRevenue;
 import com.webforj.javaland.components.pages.dashboard.widgets.inbox.Inbox;
+import com.webforj.javaland.components.pages.dashboard.widgets.teamcards.TeamCardDisplay;
 import com.webforj.javaland.components.pages.dashboard.widgets.todo.Todo;
 
 
@@ -37,6 +38,9 @@ public final class Dashboard extends Div {
     lifeTimeCharts.add(new LifetimeSales());
     lifeTimeCharts.add(new ProjectionsVsActual());
 
+    Div teamCards = new Div();
+    teamCards.add(new TeamCardDisplay());
+
     Div apps = new Div();
     apps.addClassName("appsWrapper");
     apps.add(new Todo());
@@ -47,6 +51,7 @@ public final class Dashboard extends Div {
         quarterCharts,
         new TopSelling(),
         lifeTimeCharts,
+        teamCards,
         apps);
 
     setVisible(true);

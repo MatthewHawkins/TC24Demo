@@ -18,7 +18,7 @@ import com.webforj.environment.ObjectTable;
 
 public class CodeDisplay extends ElementComposite implements HasText<CodeDisplay> {
 
-  public static final String PRISM_URL = "https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js";
+  // public static final String PRISM_URL = "https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.js";
   public static final String PRISM_CSS = "https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css";
   public static final String PRISM_LANG_URL = "https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-%%language%%.min.js";
 
@@ -31,6 +31,7 @@ public class CodeDisplay extends ElementComposite implements HasText<CodeDisplay
   private boolean clipboardButtonLoaded = false;
   private HashSet<String> prism_loaded = new HashSet<>();
   private Element self = getElement();
+  private static boolean prismLoaded = false;
 
   public CodeDisplay() {
     if (!ObjectTable.contains("PRISM_LOADED")) {
@@ -64,7 +65,7 @@ public class CodeDisplay extends ElementComposite implements HasText<CodeDisplay
       this.setText(this.text);
       String url = PRISM_LANG_URL.replace("%%language%%", language);
 
-      String scr = "function whenPrismLoaded (callback) { if (typeof Prism === 'undefined') {setTimeout (function () {whenPrismLoaded (callback);}, 100);} else { callback (); }}";
+      String scr = "function whenPrismLoaded (callback) {if (typeof Prism === 'undefined') {setTimeout (function () {whenPrismLoaded (callback);}, 100);} else { callback (); }}";
       App.getPage().addInlineJavaScript(scr);
 
       scr = "function whenPrismLang" + language + "Loaded (callback) { if (typeof Prism.languages."

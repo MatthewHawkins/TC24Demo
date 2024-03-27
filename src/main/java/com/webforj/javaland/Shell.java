@@ -5,6 +5,7 @@ package com.webforj.javaland;
 import com.webforj.annotation.InlineStyleSheet;
 import com.webforj.component.Expanse;
 import com.webforj.component.html.elements.Div;
+import com.webforj.component.html.elements.Img;
 import com.webforj.component.layout.applayout.AppLayout;
 import com.webforj.component.tabbedpane.TabbedPane.Alignment;
 import com.webforj.javaland.components.apptemplate.AppTemplate;
@@ -37,7 +38,9 @@ public final class Shell extends AppTemplate {
     Div header = new Div();
     menu.setAlignment(Alignment.CENTER);
     menu.setExpanse(Expanse.LARGE);
-    header.add(menu, new ThemeSwitcher());
+    Img logo = new Img("context://public/img/logo.png");
+    logo.addClassName("header__logo");
+    header.add(logo, menu, new ThemeSwitcher());
     header.addClassName("header__primary");
 
     addToHeader(header);
@@ -47,7 +50,7 @@ public final class Shell extends AppTemplate {
     addPage("<dwc-icon name='home' part='icon'></dwc-icon>  Home", new Home());
     addPage("<dwc-icon name='dashboard' part='icon'></dwc-icon>  Dashboard", new Dashboard());
     addPage("<dwc-icon name='shopping-cart' part='icon'></dwc-icon>  Ecom", new Ecom());
-    addPage("<dwc-icon name='book' part='icon'></dwc-icon>  dwcj.org", new Documentation());
+    addPage("<dwc-icon name='book' part='icon'></dwc-icon>  Documentation", new Documentation());
   }
 
   

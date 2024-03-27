@@ -1,6 +1,6 @@
 @AppTitle("Simple Counter")
 public final class Application extends App {
-  
+
   private int count = 0;
   Paragraph text = new Paragraph("Count: 0");
   Button button = new Button("Counter");
@@ -15,6 +15,5 @@ public final class Application extends App {
       count++;
       text.setText("Count: " + count);
     });
-
   }
 }

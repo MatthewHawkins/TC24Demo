@@ -1,7 +1,7 @@
 public class AppTemplateDemo extends App {
-  
+
   AppTemplateMobile layout = new AppTemplateMobile();
-  
+
   @Override
   public void run() throws WebforjException {
     Frame mainFrame = new Frame();
