@@ -12,7 +12,7 @@ public final class Conversion extends Div {
     counter.setIcon("chart-bar");
     counter.setTheme(AnimatedCounter.Theme.INFO);
     add(counter);
-    setStyle("flex", "1 1 24%");
+    setStyle("flex", "1 1 19%");
   }
   // @Override
   // protected void create(AbstractWindow panel) {

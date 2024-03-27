@@ -12,6 +12,6 @@ public final class TodaySales extends Div {
     counter.setIcon("shopping-cart");
     counter.setTheme(AnimatedCounter.Theme.SUCCESS);
     add(counter);
-    setStyle("flex", "1 1 24%");
+    setStyle("flex", "1 1 19%");
   }
 }

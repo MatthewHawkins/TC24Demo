@@ -8,7 +8,9 @@ import com.webforj.javaland.components.pages.dashboard.widgets.charts.LifetimeSa
 import com.webforj.javaland.components.pages.dashboard.widgets.charts.ProjectionsVsActual;
 import com.webforj.javaland.components.pages.dashboard.widgets.charts.RevenueLocation;
 import com.webforj.javaland.components.pages.dashboard.widgets.counters.Conversion;
+import com.webforj.javaland.components.pages.dashboard.widgets.counters.Target;
 import com.webforj.javaland.components.pages.dashboard.widgets.counters.TodaySales;
+import com.webforj.javaland.components.pages.dashboard.widgets.counters.TodayVisits;
 import com.webforj.javaland.components.pages.dashboard.widgets.counters.TotalRevenue;
 import com.webforj.javaland.components.pages.dashboard.widgets.inbox.Inbox;
 import com.webforj.javaland.components.pages.dashboard.widgets.teamcards.TeamCardDisplay;
@@ -25,17 +27,19 @@ public final class Dashboard extends Div {
     Div counters = new Div();
     counters.addClassName("countersWrapper");
     counters.add(new TotalRevenue());
+    counters.add(new Target());
     counters.add(new TodaySales());
-    counters.add(new Conversion());
+    // counters.add(new Conversion());
+    // counters.add(new TodayVisits());
 
     Div quarterCharts = new Div();
     quarterCharts.addClassName("chartsWrapper");
-    quarterCharts.add(new LastSales());
     quarterCharts.add(new RevenueLocation());
-
+    quarterCharts.add(new LifetimeSales());
+    
     Div lifeTimeCharts = new Div();
     lifeTimeCharts.addClassName("chartsWrapper");
-    lifeTimeCharts.add(new LifetimeSales());
+    lifeTimeCharts.add(new LastSales());
     lifeTimeCharts.add(new ProjectionsVsActual());
 
     Div teamCards = new Div();

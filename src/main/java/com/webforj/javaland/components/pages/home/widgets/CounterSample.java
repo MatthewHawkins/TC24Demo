@@ -1,20 +1,22 @@
 package com.webforj.javaland.components.pages.home.widgets;
 
 
+import com.webforj.component.Composite;
 import com.webforj.component.button.Button;
 import com.webforj.component.html.elements.Div;
 import com.webforj.component.html.elements.Paragraph;
+import com.webforj.component.layout.flexlayout.FlexJustifyContent;
+import com.webforj.component.layout.flexlayout.FlexLayout;
 import com.webforj.component.tabbedpane.TabbedPane;
-import com.webforj.component.textarea.TextArea;
 import com.webforj.utilities.Assets;
 
-public class CounterSample extends Div {
+public class CounterSample extends Composite<FlexLayout> {
   private int count = 0;
 
   public CounterSample() {
-    super();
+    getBoundComponent().setJustifyContent(FlexJustifyContent.CENTER);
     Div sample = new Div();
-    add(sample);
+    getBoundComponent().add(sample);
     sample.addClassName("javalandSample");
 
     // 1 Content

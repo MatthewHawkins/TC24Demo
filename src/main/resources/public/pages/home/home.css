@@ -42,9 +42,12 @@
 }
 
 .javalandSample {
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  /* grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); */
+  grid-template-columns: 600px 400px;
   gap: var(--dwc-space-m);
+  justify-content: center;
   overflow: visible !important;
   margin: 4rem 0;
 }
@@ -58,7 +61,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: var(--dwc-space-m);
+  gap: var(--dwc-space-l);
   /* padding: var(--dwc-space-m); */
   margin-bottom: 3rem;
 }

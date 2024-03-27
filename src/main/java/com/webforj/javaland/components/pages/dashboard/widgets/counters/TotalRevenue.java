@@ -11,6 +11,6 @@ public final class TotalRevenue extends Div {
     counter.setIcon("currency-euro");
     counter.setTheme(AnimatedCounter.Theme.PRIMARY);
     add(counter);
-    setStyle("flex", "1 1 24%");
+    setStyle("flex", "1 1 19%");
   }
 }

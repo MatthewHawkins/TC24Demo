@@ -11,5 +11,6 @@ public final class TodayVisits extends Div {
     counter.setIcon("eye");
     counter.setTheme(AnimatedCounter.Theme.WARNING);
     add(counter);
+    setStyle("flex", "1 1 19%");
   }
 }
