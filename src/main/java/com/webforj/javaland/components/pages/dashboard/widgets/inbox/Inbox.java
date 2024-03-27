@@ -1,12 +1,13 @@
 package com.webforj.javaland.components.pages.dashboard.widgets.inbox;
 
-import com.webforj.App;
 import com.webforj.component.html.elements.Div;
 import com.webforj.component.html.elements.Paragraph;
 import com.webforj.component.html.elements.Strong;
 import com.webforj.component.html.event.HtmlClickEvent;
 
 public class Inbox extends Div {
+
+  Reply replay = new Reply();
 
   public Inbox() {
 
@@ -80,9 +81,8 @@ public class Inbox extends Div {
     String title = (String) message.getUserData("title");
     String messageText = (String) message.getUserData("message");
 
-    Reply replay = new Reply(title, messageText);
     add(replay);
-    replay.show();
+    replay.show(title, messageText);
 
   }
 }

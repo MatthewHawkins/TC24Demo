@@ -10,74 +10,59 @@ import com.webforj.component.textarea.TextArea;
 
 import static com.webforj.component.button.ButtonTheme.PRIMARY;
 
-public class Reply extends Div {
+import com.webforj.component.Composite;
 
-  private String title;
-  private String message;
-  private Dialog dialog;
+public class Reply extends Composite<Dialog> {
 
-  /**
-   * Create a new instance of {@link Reply}.
-   *
-   * @param title   The title of the message.
-   * @param message The message.
-   */
+  Dialog self = getBoundComponent();
+  TextField to = new TextField();
+  TextField subject = new TextField();
+  TextArea text = new TextArea();
+
   public Reply() {
-    this("","");
-  }
-  
-  public Reply(String title, String message) {
-    this.title = title;
-    this.message = message;
-    dialog = new Dialog();
-    dialog.setAlignment(Dialog.Alignment.TOP);
-    dialog.setMaxWidth("450px");
-
-    dialog.addClassName("dialog--reply");
-
-    dialog.addToHeader(new Div().setHtml("<dwc-icon name='send'></dwc-icon> Reply To Message"));
-
-    TextField to = new TextField(title);
+    self.addToHeader(new Div().setHtml("<dwc-icon name='send'></dwc-icon> Reply To Message"));
+    self.setAlignment(Dialog.Alignment.TOP);
+    self.setMaxWidth("450px");
+    self.addClassName("dialog--reply");
+    
     to.setLabel("To:");
     to.setReadOnly(true);
-
-    TextField subject = new TextField();
+  
     subject.addClassName("dialog__title");
     subject.setLabel("Subject:");
-    subject.setPlaceholder("The subject of the message");
-
-    TextArea text = new TextArea();
+    subject.setPlaceholder("Subject");
+    
     text.addClassName("dialog__message");
-    text.setText("> " + message + "\n");
     text.setAttribute("label", "Message:");
-
+    
     Div dialogContent = new Div();
     dialogContent.addClassName("dialog__content")
         .add(to, subject, text);
-
-    dialog.addToContent(dialogContent);
+    self.addToContent(dialogContent);
 
     Button send = new Button("Send");
     send.setTheme(PRIMARY);
     send.onClick(this::handleButtonClick);
-
+  
     Button cancel = new Button("Cancel");
     cancel.onClick(this::handleButtonClick);
-
-    dialog.addToFooter(send, cancel);
-
-    add(dialog);
+  
+    self.addToFooter(send, cancel);
   }
 
   /**
    * Show the dialog.
    */
-  public void show() {
-    dialog.open();
+  public void show(String to, String text) {
+    this.to.setText(to);
+    this.text.setText("> " + text + "\n");
+    self.open();
   }
 
   private void handleButtonClick(ButtonClickEvent event) {
-    dialog.close();
-    dialog.destroy();
+    self.close();
+    to.setText("");
+    subject.setText("");
+    text.setText("");
   }
 }
