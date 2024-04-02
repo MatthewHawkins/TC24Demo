@@ -71,12 +71,9 @@ public abstract class AppTemplate extends AppLayout {
       if (displayList.get(idx).getValue().equals(Boolean.FALSE)) {
         pageManager.setPage(idx, displayList.get(idx).getKey());
         displayList.get(idx).setValue(Boolean.TRUE);
-        App.consoleLog("Test1");
       }
       
-      set(selectedPage,pageManager.getPageName(idx));
-      App.consoleLog("Test2");
-      
+      set(selectedPage,pageManager.getPageName(idx));      
       pageManager.displayPage(idx);
       
     });

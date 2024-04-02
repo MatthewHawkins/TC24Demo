@@ -26,7 +26,7 @@ public class ItemCard extends Composite<Div> {
       this.stockdiv.setText("Stock: " + stock);
       
       imagediv.add(productImage);
-      imagediv.setStyle("background-color", "#f3f7f9");
+      imagediv.setStyle("background-color", "var(--dwc-surface-1)");
       
       getBoundComponent().addClassName("itemcard")
                          .add(imagediv, namediv, pricediv, ratingdiv, stockdiv);   

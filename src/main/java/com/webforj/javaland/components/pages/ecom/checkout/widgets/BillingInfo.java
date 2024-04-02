@@ -1,6 +1,7 @@
 package com.webforj.javaland.components.pages.ecom.checkout.widgets;
 
 import com.webforj.component.button.Button;
+import com.webforj.component.button.ButtonTheme;
 import com.webforj.component.field.TextField;
 import com.webforj.component.html.elements.Div;
 import com.webforj.component.html.elements.Paragraph;
@@ -44,9 +45,9 @@ public class BillingInfo extends Div{
             Back to Shopping Cart
         </div>
         </html>
-    """);
-    back.setStyle("margin-right", "450px")
-          .addClassName("cancel-button");
+    """)
+    .setTheme(ButtonTheme.GRAY);
+    back.addClassName("cancel-button");
     
     submit = new Button("""
         <html>
@@ -55,7 +56,8 @@ public class BillingInfo extends Div{
             Proceed to Shipping
         </div>
         </html>
-    """).addClassName("submit-button");
+    """).addClassName("submit-button")
+    .setTheme(ButtonTheme.SUCCESS);
     
     FlexLayout mainLayout = FlexLayout.create()
         .vertical()
@@ -91,6 +93,7 @@ public class BillingInfo extends Div{
     
     FlexLayout rowSix = FlexLayout.create(back, submit)
         .horizontal()
+        .justify().between()
         .build();
     rowSix.setStyle("margin-top", "30px");
     

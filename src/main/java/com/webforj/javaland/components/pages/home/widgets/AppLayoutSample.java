@@ -1,10 +1,6 @@
 package com.webforj.javaland.components.pages.home.widgets;
 
-
-import com.webforj.App;
 import com.webforj.component.html.elements.Div;
-import com.webforj.component.html.elements.Iframe;
-import com.webforj.component.htmlcontainer.HtmlContainer;
 import com.webforj.component.tabbedpane.TabbedPane;
 import com.webforj.utilities.Assets;
 

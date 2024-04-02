@@ -2,6 +2,7 @@ package com.webforj.javaland.components.pages.ecom.checkout.widgets;
 
 import com.webforj.component.Composite;
 import com.webforj.component.button.Button;
+import com.webforj.component.button.ButtonTheme;
 import com.webforj.component.html.elements.Div;
 
 public class InfoControls extends Composite<Div>{
@@ -19,7 +20,8 @@ public class InfoControls extends Composite<Div>{
             <span style='display: block; margin-top: 10px;'>Billing Info</span>
         </div>
         </html>
-    """);
+    """)
+    .setTheme(ButtonTheme.INFO);
     billingBtn.addClassName("checkout-step");
     
     shippingBtn = new Button("""

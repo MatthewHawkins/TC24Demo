@@ -110,7 +110,7 @@
 .javalandSample__tabs {
   --dwc-tabs-list-indicator-height: 0;
   width: 100%;
-  border: thin solid var(--dwc-color-default);
+  border: thin solid var(--dwc--default);
   border-radius: var(--dwc-border-radius);
 }
 
