@@ -16,7 +16,6 @@
   align-items: center;
   max-width: 150px;
   margin-right: -150px;
-  padding: var(--dwc-space-s);
 }
 
 .header__logo img {

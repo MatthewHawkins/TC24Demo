@@ -28,7 +28,7 @@ class AnimatedCounter extends LitElement {
       value: { type: Number },
       valuePrefix: { type: String },
       valueSuffix: { type: String },
-      active: { type: Boolean, reflect: true }
+      active: { type: Boolean, reflect: true },
     };
   }
 
@@ -136,7 +136,7 @@ class AnimatedCounter extends LitElement {
         for (const mutation of mutationsList) {
           if (mutation.type === 'attributes' && mutation.attributeName === 'active') {
             if (mutation.target.hasAttribute('active')) {
-              this.animate(this.value += .01);
+              this.animate(this.value);
             }
           }
         }

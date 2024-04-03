@@ -2,6 +2,8 @@ package com.webforj.javaland.components.pages.ecom.products;
 
 import com.webforj.component.html.elements.Div;
 import com.webforj.component.html.elements.Paragraph;
+import com.webforj.component.navigator.Navigator;
+import com.webforj.component.navigator.Navigator.Layout;
 import com.webforj.javaland.components.pages.ecom.products.widgets.Products;
 import com.webforj.javaland.components.pages.ecom.products.widgets.SearchBar;
 
@@ -15,8 +17,12 @@ public class ProductsPage extends Div{
     Products products = new Products();
     
     SearchBar searchBar = new SearchBar();
+
+    Navigator nav = new Navigator(100);
+    nav.setLayout(Layout.PAGES);
+    nav.getPaginator().setMax(5);
     
-    this.add(productsTitle, searchBar, products);
+    this.add(productsTitle, searchBar, products, nav);
     this.addClassName("background");
     
   }
