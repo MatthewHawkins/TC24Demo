@@ -21,7 +21,7 @@ public final class TopSelling extends Div {
 
     Table<ProductRecord> table = new Table<>();
     table.setStyle("width", "100%");
-    table.setStyle("height", "56.83vh");
+    table.setStyle("height", "542px");
     table.setRowHeight(60.0);
     table.setHeaderHeight(60.0);
 
