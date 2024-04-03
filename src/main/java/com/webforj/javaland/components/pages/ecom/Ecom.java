@@ -32,12 +32,14 @@ public class Ecom extends Div{
     checkoutPageWrapper.addClassName("tab-page-container");
     checkoutPageWrapper.add(checkoutPage);
 
-    tabbedPane.addTab("Products", productsPageWrapper);
-    tabbedPane.addTab("Details", detailsPageWrapper);
-    tabbedPane.addTab("Check Out", checkoutPageWrapper);
-    tabbedPane.setAlignment(Alignment.CENTER);
+    // tabbedPane.addTab("Products", productsPageWrapper);
+    // tabbedPane.addTab("Details", detailsPageWrapper);
+    // tabbedPane.addTab("Check Out", checkoutPageWrapper);
+    // tabbedPane.setAlignment(Alignment.CENTER);
 
-    this.add(tabbedPane);
+    // this.add(tabbedPane);
+
+    this.add(productsPageWrapper, detailsPageWrapper, checkoutPageWrapper);
   }
 
 }

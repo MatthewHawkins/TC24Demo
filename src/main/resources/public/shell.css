@@ -50,6 +50,16 @@
   max-width: 1200px;  /*TODO*/
 }
 
+.page--documentation {
+  display: flex;
+  flex-direction: column;
+  gap: var(--dwc-space-m);
+  margin: 0 auto;
+  height: auto !important;
+  overflow: hidden !important;
+  max-width: unset !important;
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -66,4 +76,10 @@
   gap: var(--dwc-space-m);
   font-size: var(--dwc-font-size-l);
   font-weight: bold;
+}
+
+@media screen and (min-width: 1600px) {
+  .page{
+    max-width: 1500px;
+  }
 }
