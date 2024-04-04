@@ -15,7 +15,7 @@ public final class Header extends Div {
         /* html */"""
             <html>
               <Div class="home__header">
-                <h1 >Dynamic Web Client For Java</h1>
+                <h1 >webforJ</h1>
                 <p>
                   A robust and flexible framework that can help you deliver a modern and engaging web user interface with ease. <span>In Java</span>.
                 </p>
