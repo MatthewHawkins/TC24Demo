@@ -18,7 +18,7 @@ public final class Documentation extends Div {
     // hc.setStyle("height", "100%");
 
     Iframe docs = new Iframe();
-    docs.setSrc("https://documentation.webforj.com/");
+    docs.setSrc("http://localhost:3000/");
     docs.setStyle("width", "100%");
     docs.setStyle("height", "90dvh");
     add(docs);

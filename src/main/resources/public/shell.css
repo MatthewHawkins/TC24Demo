@@ -77,9 +77,3 @@
   font-size: var(--dwc-font-size-l);
   font-weight: bold;
 }
-
-@media screen and (min-width: 1600px) {
-  .page{
-    max-width: 1500px;
-  }
-}
