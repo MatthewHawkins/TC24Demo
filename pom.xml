@@ -9,7 +9,7 @@
 	<artifactId>javaland</artifactId>
 	<version>23.06</version>
 	<name>javaland</name>
-	<description>A DWCJ demo for Javaland 2023</description>
+	<description>A webforJ demo for Javaland 2024</description>
 
 	<properties>
 		<maven.compiler.source>17</maven.compiler.source>

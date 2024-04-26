@@ -26,7 +26,7 @@ public abstract class AppTemplate extends AppLayout {
    */
 
   /** The site title */
-  protected Paragraph title = new Paragraph("DWCJ Application");
+  protected Paragraph title = new Paragraph("webforJ Application");
 
   /** A string to the location of the image to be displayed in the drawer */
   protected String imgPath = "https://i.ibb.co/1n4n1Nh/logo.png";

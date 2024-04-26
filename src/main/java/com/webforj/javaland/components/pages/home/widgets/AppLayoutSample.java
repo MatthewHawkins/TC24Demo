@@ -29,7 +29,7 @@ public class AppLayoutSample extends Div {
             <html>
               <h2>Simple to Scale.</h2>
               <p>
-                As your application scales up,the DWCJ framework has you covered! It provides robust and responsive tools, such as the App Layout component, to help quickly and easily make your application ready to meet the needs of your business.
+                As your application scales up,the webforJ framework has you covered! It provides robust and responsive tools, such as the App Layout component, to help quickly and easily make your application ready to meet the needs of your business.
               </p>
             </html>
             """);

@@ -35,8 +35,8 @@ public class CounterSample extends Composite<FlexLayout> {
             <html>
               <h2>Easy to Start.</h2>
               <p>
-                Creating your application in the DWCJ is simple -  use our extensive library of feature-rich and robust components to
-                start building your application with a few lines of code.
+                Creating your application in webforJ is simple -  use our extensive library of feature-rich and robust components to
+                start building your application with a few lines of Java or Kotlin code!
               </p>
             </html>
             """);
@@ -51,6 +51,11 @@ public class CounterSample extends Composite<FlexLayout> {
     tabs.addTab("App.java", application);
     application.setLanguage("java");
     application.setText(Assets.contentOf("public/pages/home/code/counter/Application.java"));
+    
+    CodeDisplay applicationKt = new CodeDisplay();
+    tabs.addTab("App.kt", applicationKt);
+    applicationKt.setLanguage("java");
+    applicationKt.setText(Assets.contentOf("public/pages/home/code/counter/Application.kt"));
 
 
     // 2 Result

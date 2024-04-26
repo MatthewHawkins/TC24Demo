@@ -31,7 +31,7 @@ public class QRCodeSample extends Div {
         /* html */"""
             <html>
               <h2>Web Components.</h2>
-              <p>Reach outside of the extensive set of DWCJ core components by importing your favorite web components using the DWCJ’s web component API. Utilize any open-source web component library, or create your own for use in your application.</p>
+              <p>Reach outside of the extensive set of webforJ core components by importing your favorite web components using webforJ's web component API. Utilize any open-source web component library, or create your own for use in your application.</p>
             </html>
             """);
 

@@ -12,11 +12,6 @@ public final class Documentation extends Div {
 
     addClassName("page page--documentation");
 
-    // HtmlContainer hc = new HtmlContainer();
-    // hc.setUrl("https://dwcj.org/");
-    // hc.setStyle("width", "100%");
-    // hc.setStyle("height", "100%");
-
     Iframe docs = new Iframe();
     docs.setSrc("https://documentation.webforj.com");
     docs.setStyle("width", "100%");
