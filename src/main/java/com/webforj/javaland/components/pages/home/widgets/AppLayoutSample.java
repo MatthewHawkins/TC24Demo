@@ -58,7 +58,7 @@ public class AppLayoutSample extends Div {
     iframe.setHtml(/* html */"""
         <iframe
           class="lazyload applayout__iframe"
-          data-src="http://localhost:8888/webapp/controlsamples?class=layout_demos.applayout.AppLayoutMobileDrawer"
+          data-src="/webapp/controlsamples?class=layout_demos.applayout.AppLayoutMobileDrawer"
           style="width: 100%; height: 100%; border: none;overflow: hidden;"
           loading="lazy">
           </iframe>
