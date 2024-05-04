@@ -13,7 +13,7 @@ public final class Documentation extends Div {
     addClassName("page page--documentation");
 
     Iframe docs = new Iframe();
-    docs.setSrc("https://documentation.webforj.com");
+    docs.setSrc("/");
     docs.setStyle("width", "100%");
     docs.setStyle("height", "90dvh");
     add(docs);
