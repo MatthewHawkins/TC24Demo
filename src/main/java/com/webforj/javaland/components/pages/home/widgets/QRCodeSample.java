@@ -42,15 +42,15 @@ public class QRCodeSample extends Div {
     tabs.addClassName("javalandSample__tabs");
 
     CodeDisplay application = new CodeDisplay();
-    tabs.addTab("App.java", application);
+    tabs.addTab("QRCode.bbj", application);
     application.setLanguage("java");
-    application.setText(Assets.contentOf("public/pages/home/code/qrcode/Application.java"));
+    application.setText(Assets.contentOf("public/pages/home/code/qrcode/QrCodeApplication.java"));
 
-    CodeDisplay component = new CodeDisplay();
-    tabs.addTab("QRCode.java", component);
-    component.setLanguage("java");
-    component.setText(Assets.contentOf("public/pages/home/code/qrcode/Component.java"));
-    tabs.select(1);
+    // CodeDisplay component = new CodeDisplay();
+    // tabs.addTab("QRCode.bbj", component);
+    // component.setLanguage("java");
+    // component.setText(Assets.contentOf("public/pages/home/code/qrcode/Component.java"));
+    // tabs.select(1);
 
     // 2 Result
     // =================

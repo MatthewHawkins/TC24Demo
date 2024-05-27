@@ -13,7 +13,7 @@ public final class Application extends App {
   public void run() throws WebforjException  {
 
     Frame window = new Frame();
-    window.setText("webforJ");
+    window.setText("Dynamic Web Client");
     shell.setTitle(getPage().getTitle());
 
     window.add(shell);

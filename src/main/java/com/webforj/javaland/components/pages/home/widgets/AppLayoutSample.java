@@ -41,9 +41,9 @@ public class AppLayoutSample extends Div {
     tabs.addClassName("javalandSample__tabs");
 
     CodeDisplay application = new CodeDisplay();
-    tabs.addTab("App.java", application);
+    tabs.addTab("App.bbj", application);
     application.setLanguage("java");
-    application.setText(Assets.contentOf("public/pages/home/code/applayout/Application.java"));
+    application.setText(Assets.contentOf("public/pages/home/code/applayout/AppTemplateDemo.java"));
 
     // 2 Result
     // =================
@@ -58,7 +58,7 @@ public class AppLayoutSample extends Div {
     iframe.setHtml(/* html */"""
         <iframe
           class="lazyload applayout__iframe"
-          data-src="/webapp/controlsamples?class=layout_demos.applayout.AppLayoutMobileDrawer"
+          data-src="https://bbj-plugins.github.io/BBjAppLayout/demo/drawer-breakpoint.html"
           style="width: 100%; height: 100%; border: none;overflow: hidden;"
           loading="lazy">
           </iframe>

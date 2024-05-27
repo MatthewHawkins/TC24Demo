@@ -15,16 +15,16 @@ public final class Header extends Div {
         /* html */"""
             <html>
               <Div class="home__header">
-                <h1 >webforJ</h1>
+                <h1 >Dynamic Web Client</h1>
                 <p>
-                  A robust and flexible framework that can help you deliver a modern and engaging web user interface with ease. <span>In Java</span>.
+                  DWC empowers you deliver a modern and engaging web user interface with ease, all in the BBj language.
                 </p>
               </Div>
             </html>
               """);
 
-    Div card = new Div();
-    card.addClassName("card card--video");
+    // Div card = new Div();
+    // card.addClassName("card card--video");
 
     // Youtube video = new Youtube("z735T2XOLSw");
     // video.setAutoPlay(true);
@@ -40,8 +40,8 @@ public final class Header extends Div {
     video.setPlaysInline(true);
     video.setPreload(true);
   
-    card.add(video);
+    // card.add(video);
 
-    add(label, card);
+    add(label);
   }
 }

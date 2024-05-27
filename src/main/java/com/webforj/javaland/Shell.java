@@ -38,7 +38,7 @@ public final class Shell extends AppTemplate {
     Div header = new Div();
     menu.setAlignment(Alignment.CENTER);
     menu.setExpanse(Expanse.LARGE);
-    Img logo = new Img("context://public/img/logo.png");
+    Img logo = new Img("https://basis.cloud/wp-content/uploads/2023/07/logo_basis_v2.svg");
     logo.addClassName("header__logo");
     header.add(logo, menu, new ThemeSwitcher());
     header.addClassName("header__primary");
@@ -50,7 +50,7 @@ public final class Shell extends AppTemplate {
     addPage("<dwc-icon name='home' part='icon'></dwc-icon>  Home", new Home());
     addPage("<dwc-icon name='dashboard' part='icon'></dwc-icon>  Dashboard", new Dashboard());
     addPage("<dwc-icon name='shopping-cart' part='icon'></dwc-icon>  Ecom", new Ecom());
-    addPage("<dwc-icon name='book' part='icon'></dwc-icon>  Documentation", new Documentation());
+    // addPage("<dwc-icon name='book' part='icon'></dwc-icon>  Documentation", new Documentation());
   }
 
   

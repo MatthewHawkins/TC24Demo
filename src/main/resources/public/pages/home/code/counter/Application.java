@@ -1,19 +1,21 @@
-@AppTitle("Simple Counter")
-public final class Application extends App {
+web! = BBjAPI().getWebManager()
+web!.setMeta("viewport", "width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no")
+sysgui! =  BBjAPI().openSysGui("X0")
 
-  private int count = 0;
-  Paragraph text = new Paragraph("Count: 0");
-  Button button = new Button("Counter");
+wnd! = sysgui!.addWindow("Counter", $01101000$)
+wnd!.setCallback(BBjAPI.ON_CLOSE,"eoj")
 
-  @Override
-  public void run() throws WebforjException {
+header! = wnd!.addStaticText(wnd!.getAvailableControlID(), "Simple Counter")
+counter! = 0
+counterText! = wnd!.addStaticText(wnd!.getAvailableControlID(),"Count: " + counter!.toString())
+button! = wnd!.addButton("Counter")
+button!.setCallback(button!.ON_BUTTON_PUSH, "increment")
 
-    Frame mainFrame = new Frame();
-    mainFrame.add(text, button);
+process_events
 
-    button.onClick(e -> {
-      count++;
-      text.setText("Count: " + count);
-    });
-  }
-}
+eoj: release
+
+increment:
+counter! = counter! + 1
+counterText!.setText("Count: " + counter!.toString())
+return

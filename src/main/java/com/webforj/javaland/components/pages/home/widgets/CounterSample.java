@@ -48,14 +48,14 @@ public class CounterSample extends Composite<FlexLayout> {
     tabs.addClassName("javalandSample__tabs");
 
     CodeDisplay application = new CodeDisplay();
-    tabs.addTab("App.java", application);
+    tabs.addTab("App.bbj", application);
     application.setLanguage("java");
     application.setText(Assets.contentOf("public/pages/home/code/counter/Application.java"));
     
-    CodeDisplay applicationKt = new CodeDisplay();
-    tabs.addTab("App.kt", applicationKt);
-    applicationKt.setLanguage("java");
-    applicationKt.setText(Assets.contentOf("public/pages/home/code/counter/Application.kt"));
+    // CodeDisplay applicationKt = new CodeDisplay();
+    // // tabs.addTab("App.kt", applicationKt);
+    // applicationKt.setLanguage("java");
+    // applicationKt.setText(Assets.contentOf("public/pages/home/code/counter/Application.kt"));
 
 
     // 2 Result

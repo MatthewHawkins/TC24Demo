@@ -81,7 +81,7 @@
 					<!-- see https://github.com/DwcJava/dwcj-install-maven-plugin for options -->
 					<deployurl>http://localhost:8888/webforj-install</deployurl>
 					<classname>com.webforj.javaland.Application</classname>
-					<publishname>javaland</publishname>
+					<publishname>bbjdemo</publishname>
 					<debug>true</debug>
 				</configuration>
 			</plugin>
